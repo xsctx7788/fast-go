@@ -37,3 +37,16 @@ func (c *UserController) Post() {
 	c.Data["xml"] = &userInfo
 	c.ServeXML()
 }
+
+// 输出YAML
+func (c *UserController) Put() {
+	uid, _ := c.GetInt("id")
+
+	userInfo := userInfo{
+		Id:     uid,
+		Email:  "123@123.com",
+		Mobile: "1300000000",
+	}
+	c.Data["yaml"] = &userInfo
+	c.ServeYAML()
+}

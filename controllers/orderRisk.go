@@ -5,6 +5,10 @@ import (
 	beego "github.com/beego/beego/v2/server/web"
 )
 
-type WarehouseOutController struct {
+type OrderRiskController struct {
 	beego.Controller
+}
+
+func (c *OrderRiskController) List() {
+
 }

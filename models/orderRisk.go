@@ -1,4 +1,4 @@
-package main
+package models
 
 import (
 	"fmt"
@@ -25,9 +25,9 @@ func main() {
 		SingularTable: true,
 	},
 	})
+
 	if err != nil {
 		fmt.Printf("failed to connect database")
 	}
 	db.Debug().Model(&risk).Where(OrderRisk{Id: 54}).Update("OrderId", "G0000000001") // 仅更新非零值字段
-
 }

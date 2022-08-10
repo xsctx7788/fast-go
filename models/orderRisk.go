@@ -32,7 +32,7 @@ type OrderRisk struct {
 const DSN = "root:123456@tcp(localhost)/skr-order?charset-utf8mb4&parseTime=True&loc=Local"
 
 func main() {
-
+	//
 	//var risk OrderRisk
 	//db, err := gorm.Open(mysql.Open(DSN), &gorm.Config{NamingStrategy: schema.NamingStrategy{
 	//	SingularTable: true, // 使用单数表名
@@ -50,9 +50,9 @@ func main() {
 	// db.Table("deleted_users").AutoMigrate(&User{})
 
 	// 从另一张表查询数据
-	// var deletedUsers []User
-	// db.Table("deleted_users").Find(&deletedUsers)
-	// SELECT * FROM deleted_users;
+	//var risks []User
+	//db.Debug().Model(&risk).Where(OrderRisk{ID: 54}).Find(&risks)
+	//db.Table("deleted_users").Find(&deletedUsers)
 
 	// db.Table("deleted_users").Where("name = ?", "jinzhu").Delete(&User{})
 	// DELETE FROM deleted_users WHERE name = 'jinzhu';

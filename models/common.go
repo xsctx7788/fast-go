@@ -12,6 +12,7 @@ func UnixToDate(timestamp int) string {
 	return t.Format("2006-01-02 15:04:05")
 }
 
+// 时间转时间戳
 func DateToUnix(str string) int64 {
 	template := "2006-01-02 15:04:05"
 	t, err := time.ParseInLocation(template, str, time.Local)
